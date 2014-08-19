@@ -1,0 +1,84 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="mainPageApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+       
+    <!-- jquery -->
+    <script src="~/Scripts/jquery/jquery.min.js"></script>
+
+    <!-- bootstrap includ -->
+    <link rel="stylesheet" href="~/Bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/Bootstrap/css/bootstrap-responsive.css" />
+    <script src="~/Bootstrap/js/bootstrap.js"></script>
+
+    <!-- angular includ -->
+    <script src="~/Scripts/angular/angular.js"></script>
+    <script src="~/Scripts/angular/angular-route.js"></script>
+
+    <!-- angular config -->
+    <script src="~/Views/Home/mainPageApp.js"></script>
+
+    <!-- services -->
+    <script src="~/Scripts/restApi.js"></script>
+
+    <!-- controllers -->
+    <script src="~/Views/Home/mainPageCtrl.js"></script>
+    <script src="~/Views/Home/Parts/List/viewListCtrl.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    @*<resource path="~/Scripts/angularjs/angular-animate.js"  />
+    <resource path="~/Scripts/angularjs/angular-route.min.js"  />
+            <resource path="~/Scripts/angularjs/angular-cookies.js"  />
+            <resource path="~/Scripts/angularjs/angular-sanitize.min.js"  />
+            <resource path="~/Scripts/angularjs/route-segment.js"  />
+            <resource path="~/Scripts/angularjs/view-segment.js"  />
+            <resource path="~/Scripts/utils/angular-ui-mask-tcsfix.js"/>
+            <resource path="~/Scripts/angularjs/i18n/angular-locale_ru-ru.js" />
+            <resource path="~/Scripts/bootstrap/bootstrap.js"  />
+            <resource path="~/Scripts/bootstrap/bootstrap-tooltip-fix.js" minifierRef="off" />
+            <resource path="~/Scripts/bootstrap/tcs-typeahead.js" minifierRef="off" />
+            <resource path="~/Scripts/utils/moment.min.js"  />
+            <resource path="~/Scripts/utils/underscore-min.js"  />
+            <resource path="~/Scripts/utils/toastr.min.js"  />
+            <resource path="~/Scripts/utils/bootbox.min.js" />
+            <resource path="~/Scripts/utils/ui-bootstrap-tpls-0.8.0-tcsfix.js"  />
+            <resource path="~/Scripts/utils/angular-ui-sortable.js" />
+            <resource path="~/Scripts/utils/jquery.pnotify.js"  />
+            <resource path="~/Scripts/utils/lcs.js" />
+            <resource path="~/Scripts/restApi.js" />
+            <resource path="~/Scripts/app-utils.js" />
+            <resource path="~/Scripts/filters.js" />
+            <resource path="~/Scripts/directives.js" />
+            <resource path="~/Scripts/fileUploader.js" />
+            <resource path="~/Scripts/fileUploadService.js" />
+            <resource path="~/Scripts/constants.js" />
+            <resource path="~/Scripts/utils/loading-bar.js" />
+            <resource path="~/Scripts/utils/xeditable.js" />
+            <resource path="~/Scripts/ckeditor/ckeditorBasepath.js" />
+            <resource path="~/Scripts/ckeditor/ckeditor.js" />
+            <resource path="~/Scripts/ckeditor/ng-ckeditor.js" />
+            <resource path="~/Scripts/utils/select2.js" />
+            <resource path="~/Scripts/utils/select2_locale_ru.js" />
+            <resource path="~/Scripts/utils/jquery.autosize.js" />
+            <resource path="~/Scripts/utils/moment-timezone.js" />
+            <resource path="~/Scripts/utils/moment-timezone-data.js" />
+            <resource path="~/Scripts/utils/moment-tcs.js" />*@
+
+    <title>Hello</title>
+</head>
+<body>
+    <div ng-controller="mainPageCtrl">
+        <div class="span12" ng-view>
+        </div>
+    </div>
+</body>
+</html>

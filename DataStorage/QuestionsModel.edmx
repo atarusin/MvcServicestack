@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище QuestionsModel" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Хранилище QuestionsModelContainer">
+          <EntitySet Name="Categories" EntityType="Хранилище QuestionsModel.Categories" store:Type="Tables" Schema="QuestionsDB" />
+          <EntitySet Name="Comments" EntityType="Хранилище QuestionsModel.Comments" store:Type="Tables" Schema="QuestionsDB" />
+          <EntitySet Name="Questions" EntityType="Хранилище QuestionsModel.Questions" store:Type="Tables" Schema="QuestionsDB" />
+          <EntitySet Name="QuestionStatuses" EntityType="Хранилище QuestionsModel.QuestionStatuses" store:Type="Tables" Schema="QuestionsDB" />
+          <AssociationSet Name="fk_Category_Questions" Association="Хранилище QuestionsModel.fk_Category_Questions">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Questions" EntitySet="Questions" />
+          </AssociationSet>
+          <AssociationSet Name="fk_QStatus_Questions" Association="Хранилище QuestionsModel.fk_QStatus_Questions">
+            <End Role="QuestionStatuses" EntitySet="QuestionStatuses" />
+            <End Role="Questions" EntitySet="Questions" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Question_Comments" Association="Хранилище QuestionsModel.fk_Question_Comments">
+            <End Role="Questions" EntitySet="Questions" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Comments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="QuestionId" Type="int" Nullable="false" />
+          <Property Name="Content" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Questions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="Title" Type="text" Nullable="false" />
+          <Property Name="Content" Type="text" />
+        </EntityType>
+        <EntityType Name="QuestionStatuses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="LName" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <Association Name="fk_Category_Questions">
+          <End Role="Categories" Type="Хранилище QuestionsModel.Categories" Multiplicity="1" />
+          <End Role="Questions" Type="Хранилище QuestionsModel.Questions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Questions">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_QStatus_Questions">
+          <End Role="QuestionStatuses" Type="Хранилище QuestionsModel.QuestionStatuses" Multiplicity="1" />
+          <End Role="Questions" Type="Хранилище QuestionsModel.Questions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QuestionStatuses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Questions">
+              <PropertyRef Name="StatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Question_Comments">
+          <End Role="Questions" Type="Хранилище QuestionsModel.Questions" Multiplicity="1" />
+          <End Role="Comments" Type="Хранилище QuestionsModel.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="QuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuestionsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="QuestionsEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Categories" EntityType="QuestionsModel.Category" />
+          <EntitySet Name="Comments" EntityType="QuestionsModel.Comment" />
+          <EntitySet Name="Questions" EntityType="QuestionsModel.Question" />
+          <EntitySet Name="QuestionStatuses" EntityType="QuestionsModel.QuestionStatus" />
+          <AssociationSet Name="fk_Category_Questions" Association="QuestionsModel.fk_Category_Questions">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Questions" EntitySet="Questions" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Question_Comments" Association="QuestionsModel.fk_Question_Comments">
+            <End Role="Questions" EntitySet="Questions" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="fk_QStatus_Questions" Association="QuestionsModel.fk_QStatus_Questions">
+            <End Role="QuestionStatuses" EntitySet="QuestionStatuses" />
+            <End Role="Questions" EntitySet="Questions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Questions" Relationship="QuestionsModel.fk_Category_Questions" FromRole="Categories" ToRole="Questions" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="QuestionId" Type="Int32" Nullable="false" />
+          <Property Name="Content" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Question" Relationship="QuestionsModel.fk_Question_Comments" FromRole="Comments" ToRole="Questions" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+          <Property Name="Content" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Category" Relationship="QuestionsModel.fk_Category_Questions" FromRole="Questions" ToRole="Categories" />
+          <NavigationProperty Name="Comments" Relationship="QuestionsModel.fk_Question_Comments" FromRole="Questions" ToRole="Comments" />
+          <NavigationProperty Name="QuestionStatus" Relationship="QuestionsModel.fk_QStatus_Questions" FromRole="Questions" ToRole="QuestionStatuses" />
+        </EntityType>
+        <EntityType Name="QuestionStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="LName" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Questions" Relationship="QuestionsModel.fk_QStatus_Questions" FromRole="QuestionStatuses" ToRole="Questions" />
+        </EntityType>
+        <Association Name="fk_Category_Questions">
+          <End Role="Categories" Type="QuestionsModel.Category" Multiplicity="1" />
+          <End Role="Questions" Type="QuestionsModel.Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Questions">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Question_Comments">
+          <End Role="Questions" Type="QuestionsModel.Question" Multiplicity="1" />
+          <End Role="Comments" Type="QuestionsModel.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="QuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_QStatus_Questions">
+          <End Role="QuestionStatuses" Type="QuestionsModel.QuestionStatus" Multiplicity="1" />
+          <End Role="Questions" Type="QuestionsModel.Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QuestionStatuses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Questions">
+              <PropertyRef Name="StatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище QuestionsModelContainer" CdmEntityContainer="QuestionsEntities">
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="QuestionsModel.Category">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="QuestionsModel.Comment">
+              <MappingFragment StoreEntitySet="Comments">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="QuestionsModel.Question">
+              <MappingFragment StoreEntitySet="Questions">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuestionStatuses">
+            <EntityTypeMapping TypeName="QuestionsModel.QuestionStatus">
+              <MappingFragment StoreEntitySet="QuestionStatuses">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LName" ColumnName="LName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,5 @@
+D:\Projects\MvcServicestack\RestServisecs\bin\RestServisecs.dll
+D:\Projects\MvcServicestack\RestServisecs\bin\RestServisecs.pdb
+D:\Projects\MvcServicestack\RestServisecs\obj\Debug\RestServisecs.dll
+D:\Projects\MvcServicestack\RestServisecs\obj\Debug\RestServisecs.pdb
+d:\Projects\MvcServicestack\RestServisecs\obj\Debug\RestServisecs.csprojResolveAssemblyReference.cache

@@ -1,0 +1,10 @@
+d:\Projects\MvcServicestack\DataStorage\bin\Debug\AutoMapper.Net4.dll
+d:\Projects\MvcServicestack\DataStorage\bin\Debug\DataStorage.dll
+d:\Projects\MvcServicestack\DataStorage\bin\Debug\DataStorage.pdb
+d:\Projects\MvcServicestack\DataStorage\bin\Debug\AutoMapper.dll
+d:\Projects\MvcServicestack\DataStorage\bin\Debug\AutoMapper.xml
+d:\Projects\MvcServicestack\DataStorage\obj\Debug\DataStorage.dll
+d:\Projects\MvcServicestack\DataStorage\obj\Debug\DataStorage.pdb
+D:\Projects\MvcServicestack\DataStorage\bin\Debug\ICoreServices.dll
+D:\Projects\MvcServicestack\DataStorage\bin\Debug\ICoreServices.pdb
+D:\Projects\MvcServicestack\DataStorage\obj\Debug\DataStorage.csprojResolveAssemblyReference.cache

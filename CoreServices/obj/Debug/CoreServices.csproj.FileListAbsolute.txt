@@ -1,0 +1,12 @@
+d:\Projects\MvcServicestack\CoreServices\bin\Debug\CoreServices.dll
+d:\Projects\MvcServicestack\CoreServices\bin\Debug\CoreServices.pdb
+d:\Projects\MvcServicestack\CoreServices\obj\Debug\CoreServices.dll
+d:\Projects\MvcServicestack\CoreServices\obj\Debug\CoreServices.pdb
+d:\Projects\MvcServicestack\CoreServices\obj\Debug\CoreServices.csprojResolveAssemblyReference.cache
+d:\Projects\MvcServicestack\CoreServices\bin\Debug\AutoMapper.Net4.dll
+d:\Projects\MvcServicestack\CoreServices\bin\Debug\AutoMapper.dll
+d:\Projects\MvcServicestack\CoreServices\bin\Debug\DataStorage.dll
+d:\Projects\MvcServicestack\CoreServices\bin\Debug\DataStorage.pdb
+d:\Projects\MvcServicestack\CoreServices\bin\Debug\AutoMapper.xml
+D:\Projects\MvcServicestack\CoreServices\bin\Debug\ICoreServices.dll
+D:\Projects\MvcServicestack\CoreServices\bin\Debug\ICoreServices.pdb
