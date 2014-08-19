@@ -17,13 +17,13 @@ namespace WebClient
             routes.MapRoute(
                 name: "Parts",
                 url: "{controller}/PartsViews/{*viewName}",
-                defaults: new { controller = "Home", action = "PartsViews", viewName = "noview" }
+                defaults: new { controller = "Operator", action = "PartsViews", viewName = "noview" }
             );
 
             routes.MapRoute(
                 name: "Page",
                 url: "{controller}/{*viewName}",
-                defaults: new { controller = "Home", action = "Page", viewName = "mainPage" }
+                defaults: new { controller = "Operator", action = "Page", viewName = "mainPage" }
             );
         }
     }

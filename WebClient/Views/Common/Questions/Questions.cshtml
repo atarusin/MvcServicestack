@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+<div ng-show="data.isLoad()">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Статус</th>
+                <th>Вопрос</th>
+                <th>Катигория</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in data.list.items">
+                <td><a href="#/questions/{{item.id}}/edit?b={{currentUrl()}}" title="Редактировать"><i class="glyphicon glyphicon-pencil btn-sm pull-right"></i></a></td>
+                <td>{{item.questionStatus.name}}</td>
+                <td><a href="#/questions/{{item.id}}?b={{currentUrl()}}" title="Посмотреть комментарии">{{item.title}}</a></td>
+                <td>{{item.category.title}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

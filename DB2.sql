@@ -58,3 +58,13 @@ ADD CONSTRAINT `fk_QStatus_Questions`
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
 /* */
+INSERT INTO `QuestionsDB`.`Categories` (`Title`) VALUES ('SQL');
+  
+INSERT INTO `QuestionsDB`.`QuestionStatuses` (`Name`, `LName`) VALUES ('Открыт', 'Открыть');
+INSERT INTO `QuestionsDB`.`QuestionStatuses` (`Name`, `LName`) VALUES ('На голосовании', 'На голосование');
+INSERT INTO `QuestionsDB`.`QuestionStatuses` (`Name`, `LName`) VALUES ('Закрыть', 'Закрыт');
+
+INSERT INTO `QuestionsDB`.`Questions` (`CategoryId`, `StatusId`, `Title`, `Content`) VALUES ('1', '1', 'Подмножества SQL команд', 'На какие подмножества деляться все команды SQL? DDL (Data Definition Language, язык определения данных) - Команды определения данных. DCL (Data Control Language) - Команды языка управления данными. TCL (Тгаnsасtiоn Соntrol Language) - Команды языка управления транзакциями. DML (Data Manipulation Language) - Команды языка манипулирования данными.');
+
+INSERT INTO `QuestionsDB`.`Comments` (`QuestionId`, `Content`) VALUES ('1', '+1');
+

@@ -7,28 +7,47 @@
 <html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="mainPageApp">
 <head>
     <meta name="viewport" content="width=device-width" />
-       
+
     <!-- jquery -->
     <script src="~/Scripts/jquery/jquery.min.js"></script>
 
     <!-- bootstrap includ -->
+    <!-- bootstrap includ -->
     <link rel="stylesheet" href="~/Bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/Bootstrap/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="~/Bootstrap/css/bootstrap.css.map" />
+    <link rel="stylesheet" href="~/Bootstrap/css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="~/Bootstrap/css/bootstrap-theme.css.map" />
+
     <script src="~/Bootstrap/js/bootstrap.js"></script>
 
     <!-- angular includ -->
+    @*<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>*@
     <script src="~/Scripts/angular/angular.js"></script>
     <script src="~/Scripts/angular/angular-route.js"></script>
 
     <!-- angular config -->
-    <script src="~/Views/Home/mainPageApp.js"></script>
+    <script src="~/Views/Operator/mainPageApp.js"></script>
+
+    <!-- utilse -->
+    <script src="~/Scripts/utils/moment.js"></script>
+    <script src="~/Scripts/utils/underscore-min.js"></script>
+    <script src="~/Scripts/utils/bootbox.js"></script>
+
+    <!-- ext utils-->
+    <script src="~/Scripts/utils.js"></script>
+    <script src="~/Scripts/filters.js"></script>
 
     <!-- services -->
     <script src="~/Scripts/restApi.js"></script>
 
     <!-- controllers -->
-    <script src="~/Views/Home/mainPageCtrl.js"></script>
-    <script src="~/Views/Home/Parts/List/viewListCtrl.js"></script>
+    <script src="~/Views/Operator/mainPageCtrl.js"></script>
+
+    <script src="~/Views/Common/Questions/questionsCtrl.js"></script>
+    <script src="~/Views/Common/Questions/questionCtrl.js"></script>
+    <script src="~/Views/Common/Questions/questionEditCtrl.js"></script>
+
+    <link rel="stylesheet" href="~/Styles/main.css" />
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -76,9 +95,23 @@
     <title>Hello</title>
 </head>
 <body>
-    <div ng-controller="mainPageCtrl">
-        <div class="span12" ng-view>
+    <div class="col-xs-12" ng-controller="mainPageCtrl">
+
+        @*Header*@
+        <div class="page-header col-xs-12">
+            <h1>Заголовок</h1>
         </div>
+
+        @*Menu*@
+        <div class="col-xs-2">
+            <div class="list-group">
+                <a class="list-group-item" href="#/questions" ng-class="{ active: isPathContain('/questions')}">Вопросы</a>
+            </div>
+        </div>
+
+        @*Основной блок *@
+        <div class="col-xs-10" ng-view></div>
+
     </div>
 </body>
 </html>

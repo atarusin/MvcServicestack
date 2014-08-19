@@ -1,0 +1,24 @@
+﻿.form-hader {
+    margin: 0;
+}
+
+.panel-body .input-group {
+    margin-bottom: 10px;
+}
+
+.input-group-errors {
+    margin-top: -5px;
+}
+
+input.ng-invalid {
+    background-color: rgb(255, 224, 211);
+}
+
+.input-group-errors .alert.alert-danger {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.control-required {
+    
+}

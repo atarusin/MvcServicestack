@@ -14,9 +14,10 @@ namespace RestServices.QuestionStatusesWebService.RequestDTO
         [ApiMember(Description = "Идентификатор статуса")]
         public int Id { get; set; }
 
-        [ApiMember(Description = "Название статуса")]
+        [ApiMember(Description = "Название статуса в именительном подеже")]
         public string Name { get; set; }
 
+        [ApiMember(Description = "Название статуса в родительном подеже")]
         public string LName { get; set; }
     }
 }

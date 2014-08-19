@@ -136,7 +136,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OperatorController.cs" />
+    <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -145,19 +146,30 @@
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Content Include="Bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Bootstrap\css\bootstrap.css" />
+    <Content Include="Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Bootstrap\js\bootstrap.js" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\angular\angular-route.js" />
     <Content Include="Scripts\angular\angular.js" />
+    <Content Include="Scripts\filters.js" />
     <Content Include="Scripts\jquery\jquery.js" />
     <Content Include="Scripts\jquery\jquery.min.js" />
     <Content Include="Scripts\restApi.js" />
-    <Content Include="Views\Home\mainPageApp.js" />
-    <Content Include="Views\Home\Parts\List\viewListCtrl.js" />
-    <Content Include="Views\Home\mainPageCtrl.js" />
+    <Content Include="Scripts\utils.js" />
+    <Content Include="Scripts\utils\bootbox.js" />
+    <Content Include="Scripts\utils\moment.js" />
+    <Content Include="Scripts\utils\underscore-min.js" />
+    <Content Include="Styles\main.css" />
+    <Content Include="Views\Operator\mainPageApp.js" />
+    <Content Include="Views\Common\Questions\questionsCtrl.js" />
+    <Content Include="Views\Operator\mainPageCtrl.js" />
+    <Content Include="Views\Common\Questions\questionEditCtrl.js" />
+    <Content Include="Views\Common\Questions\questionCtrl.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -168,19 +180,34 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Styles\" />
+    <Folder Include="Views\Operator\Parts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\mainPage.cshtml" />
+    <Content Include="Views\Operator\mainPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Parts\List\viewList.cshtml" />
+    <Content Include="Views\Common\Questions\Questions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bootstrap\js\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Common\Questions\QuestionEdit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Common\Questions\Question.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Bootstrap\css\bootstrap.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

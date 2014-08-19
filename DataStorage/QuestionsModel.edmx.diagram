@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="QuestionsModel.Category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QuestionsModel.Comment" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QuestionsModel.Question" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuestionsModel.QuestionStatus" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuestionsModel.QuestionStatus" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="QuestionsModel.fk_Category_Questions" ManuallyRouted="false" />
         <AssociationConnector Association="QuestionsModel.fk_Question_Comments" ManuallyRouted="false" />
         <AssociationConnector Association="QuestionsModel.fk_QStatus_Questions" ManuallyRouted="false" />
