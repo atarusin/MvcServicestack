@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using CoreServices.IModels;
 using ServiceStack;
+using ServiceStack.ServiceHost;
 
 namespace RestServices.CategoriesWebService.RequestDTO
 {
-    [Api(Description = "Получение катигории вопросов")]
+    [Api("Получение катигории вопросов")]
     [Route("/categories/update", WebMethods.Update)]
     public class UpdateCategory : IReturn
     {

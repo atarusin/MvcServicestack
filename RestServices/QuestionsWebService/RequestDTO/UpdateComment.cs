@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using CoreServices.IModels;
 using ServiceStack;
+using ServiceStack.ServiceHost;
+using ServiceStack.Text;
 
 namespace RestServices.QuestionsWebService.RequestDTO
 {

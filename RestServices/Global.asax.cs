@@ -18,7 +18,7 @@ namespace RestServices
         {
             #region JsConfig
             //Это глобальные настройки для JsonSerializer. При сериализации данных в базу они тоже используются
-            JsConfig.DateHandler = DateHandler.ISO8601;
+            JsConfig.DateHandler = JsonDateHandler.ISO8601;
             JsConfig.EmitCamelCaseNames = true;
             #endregion
 

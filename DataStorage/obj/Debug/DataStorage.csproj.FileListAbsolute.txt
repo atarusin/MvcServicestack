@@ -22,3 +22,4 @@ D:\Projects\GitHub\MvcServicestack\DataStorage\bin\Debug\EntityFramework.xml
 D:\Projects\GitHub\MvcServicestack\DataStorage\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\GitHub\MvcServicestack\DataStorage\bin\Debug\ru\EntityFramework.resources.dll
 D:\Projects\GitHub\MvcServicestack\DataStorage\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+D:\Projects\GitHub\MvcServicestack\DataStorage\obj\Debug\DataStorage.csprojResolveAssemblyReference.cache

@@ -14,9 +14,9 @@ angularApp.config(['$routeProvider', '$injector', function ($routeProvider, $inj
 
     $routeProvider
 
-        .when('/questions', { templateUrl: '/Common/Questions/viewQuestions', controller: 'questionsCtrl' })
-        .when('/questions/create', { templateUrl: '/Common/Questions/QuestionEdit', controller: 'questionEditCtrl' })
+        .when('/questions', { templateUrl: '/Common/Questions/Questions', controller: 'questionsCtrl' })
         .when('/questions/:id', { templateUrl: '/Common/Questions/Question', controller: 'questionCtrl' })
+        .when('/questions/create', { templateUrl: '/Common/Questions/QuestionEdit', controller: 'questionEditCtrl' })
         .when('/questions/:id/edit', { templateUrl: '/Common/Questions/QuestionEdit', controller: 'questionEditCtrl' })
         .otherwise({ redirectTo: '/questions' });
 }]);

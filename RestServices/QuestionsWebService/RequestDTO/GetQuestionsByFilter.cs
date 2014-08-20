@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using CoreServices.IModels;
-using ServiceStack;
+using ServiceStack.ServiceHost;
 
 namespace RestServices.QuestionsWebService.RequestDTO
 {

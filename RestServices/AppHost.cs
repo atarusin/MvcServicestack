@@ -8,6 +8,13 @@ using CoreServices.Services;
 using CoreServices.Mappers;
 using Funq;
 using ServiceStack;
+using ServiceStack.Common;
+using ServiceStack.Common.Web;
+//using ServiceStack.Logging;
+using ServiceStack.ServiceHost;
+//using ServiceStack.ServiceInterface.ServiceModel;
+//using ServiceStack.Text;
+using ServiceStack.WebHost.Endpoints;
 
 namespace RestServices
 {
@@ -21,11 +28,12 @@ namespace RestServices
 #if(DEBUG)
             isDebugMode = true;
 #endif
-            SetConfig(new HostConfig
+
+            SetConfig(new EndpointHostConfig
             {
                 EnableFeatures = Feature.All.Remove(Feature.Jsv | Feature.Soap),
                 //all formats except of JSV and SOAP
-                DefaultContentType = MimeTypes.Json,
+                DefaultContentType = ContentType.Json,
                 AllowJsonpRequests = false,
                 DebugMode = isDebugMode,
                 MapExceptionToStatusCode =
@@ -41,7 +49,6 @@ namespace RestServices
             container.Register<ICommentsService>(o => new CommentsService());
             container.Register<IQuestionStatusesService>(o => new QuestionStatusesService());
             container.Register<IQuestionsService>(o => new QuestionsService());
-
         }
     }
 }

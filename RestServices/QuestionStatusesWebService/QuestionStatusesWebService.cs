@@ -6,7 +6,7 @@ using AutoMapper;
 using CoreServices.IModels;
 using CoreServices.IServices;
 using RestServices.QuestionStatusesWebService.RequestDTO;
-using ServiceStack;
+using ServiceStack.ServiceInterface;
 
 namespace RestServices.QuestionStatusesWebService
 {
